@@ -1,14 +1,20 @@
 name: brain-games-linter
 
 on:
-  - push
+  push:
+    branches:
+      - '**'
+    tags:
+      - '**'
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: run linter
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+      - name: updating dpendencies and do linter check
         run: |
-          pip install poetry 
-          make install 
+          pip install poetry
+          make install
           make lint
