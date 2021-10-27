@@ -10,5 +10,6 @@ jobs:
       - name: run linter
         run: |
           pip install poetry 
-          make install 
+          make install
+          make build 
           make lint
