@@ -1,4 +1,4 @@
-name: brain_games_linter
+name: brain-games-linter
 
 on:
   - push
