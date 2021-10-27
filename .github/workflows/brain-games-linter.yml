@@ -8,8 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: run linter
-        run: |
+        run:
           pip install poetry 
           make install
-          make build 
           make lint
